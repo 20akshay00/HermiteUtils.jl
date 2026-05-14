@@ -20,7 +20,7 @@ Building upon this, it provides a handful of wrappers that are easier to use.
 ### Hermite Polynomials
 
 <p align="center">
-  <img src="examples/hermite_polynomials.png" width="800" />
+  <img src="examples/hermite_polynomials.png" width="600" />
 </p>
 
 These functions evaluate the normalized physicist's Hermite polynomials $`\tilde{H}_n(x)`$. Note that this includes the normalization factors such that $`\int_{-\infty}^{\infty} e^{-x^2} \tilde{H}_m(x) \tilde{H}_n(x) dx = \delta_{mn}`$.
@@ -41,7 +41,7 @@ basis = hermite_polynomial_basis(5, 0.5)
 ### Hermite Functions
 
 <p align="center">
-  <img src="examples/hermite_functions.png" width="400" />
+  <img src="examples/hermite_functions.png" width="600" />
 </p>
 
 These functions evaluate the normalized Hermite functions $`\psi_n(x) = \tilde{H}_n(x) e^{-x^2/2}`$.
@@ -61,7 +61,7 @@ y = ψ2(0.5)
 ### Product Integrals
 
 <p align="center">
-  <img src="examples/hermite_four_integrals.png" width="400" />
+  <img src="examples/hermite_four_integrals.png" width="800" />
 </p>
 
 The package can also compute the integral of an arbitrary product of Hermite functions: $\int_{-\infty}^{\infty} \psi_{n_1}(x) \psi_{n_2}(x) \dots \psi_{n_m}(x) dx$. This is performed using Gauss-Hermite quadrature, which is analytically exact for these products.
