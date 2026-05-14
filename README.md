@@ -41,7 +41,7 @@ basis = hermite_polynomial_basis(5, 0.5)
 ### Hermite Functions
 
 <p align="center">
-  <img src="examples/hermite_functions.png" width="800" />
+  <img src="examples/hermite_functions.png" width="400" />
 </p>
 
 These functions evaluate the normalized Hermite functions $`\psi_n(x) = \tilde{H}_n(x) e^{-x^2/2}`$.
@@ -61,7 +61,7 @@ y = ψ2(0.5)
 ### Product Integrals
 
 <p align="center">
-  <img src="examples/hermite_four_integrals.png" width="800" />
+  <img src="examples/hermite_four_integrals.png" width="400" />
 </p>
 
 The package can also compute the integral of an arbitrary product of Hermite functions: $\int_{-\infty}^{\infty} \psi_{n_1}(x) \psi_{n_2}(x) \dots \psi_{n_m}(x) dx$. This is performed using Gauss-Hermite quadrature, which is analytically exact for these products.
