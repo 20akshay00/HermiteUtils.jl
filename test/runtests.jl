@@ -5,6 +5,8 @@ using FastGaussQuadrature
 using SpecialFunctions, HypergeometricFunctions, StaticArrays
 
 # analytic baseline
+# borrowed from the following implementation: 
+# https://github.com/RimuQMC/Rimu.jl/blob/6663cf95181954ef348c2705a8e4d58242052000/src/Hamiltonians/HOCartesianContactInteractions.jl#L1-L18
 function hermite_four_integral(i, j, k, l; max_level=typemax(Int))
     all(0 .≤ (i, j, k, l) .≤ max_level) || return 0.0
     iseven(i + j + k + l) || return 0.0
