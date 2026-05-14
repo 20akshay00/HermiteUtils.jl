@@ -18,7 +18,7 @@ $h_{k} = \sqrt{\frac{2}{k}} x h_{k-1} - \sqrt{\frac{k-1}{k}} h_{k-2}$
 Building upon this, it provides a handful of wrappers that are easier to use.
 
 ### Hermite Polynomials
-These functions evaluate the normalized physicist's Hermite polynomials $$\tilde{H}_n(x)$$. Note that this includes the normalization factors such that $$\int_{-\infty}^{\infty} e^{-x^2} \tilde{H}_m(x) \tilde{H}_n(x) dx = \delta_{mn}$$.
+These functions evaluate the normalized physicist's Hermite polynomials $`\tilde{H}_n(x)`$. Note that this includes the normalization factors such that $$\int_{-\infty}^{\infty} e^{-x^2} \tilde{H}_m(x) \tilde{H}_n(x) dx = \delta_{mn}$$.
 
 ```julia
 # evaluate a single polynomial of degree n at x
