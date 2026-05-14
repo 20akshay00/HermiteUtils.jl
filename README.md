@@ -45,7 +45,6 @@ val = hermite_function(2, 0.5)
 y = ψ2(0.5)
 
 # evaluate the basis from degree 0 to n
-# this is useful for expanding signals or solving PDEs
 Φ = hermite_function_basis(10, -1.2)
 ```
 
@@ -53,8 +52,8 @@ y = ψ2(0.5)
 The package can also compute the integral of an arbitrary product of Hermite functions: $\int_{-\infty}^{\infty} \psi_{n_1}(x) \psi_{n_2}(x) \dots \psi_{n_m}(x) dx$. This is performed using Gauss-Hermite quadrature, which is analytically exact for these products.
 
 ```julia
-# check orthogonality: should be 1.0 if degrees match, else 0.0
-hermite_product_integral((2, 2))
+# verifying normalization
+hermite_product_integral((2, 2)) ≈ 1.0
 
 # compute the integral of a four-function product
 res = hermite_product_integral((0, 1, 1, 2))
@@ -63,7 +62,6 @@ res = hermite_product_integral((0, 1, 1, 2))
 using FastGaussQuadrature
 quad = gausshermite(20)
 for i in 1:10
-    # passing the quad_rule avoids repeated allocations of nodes and weights
     hermite_product_integral((i, i, 0, 0); quad_rule=quad)
 end
 ```
